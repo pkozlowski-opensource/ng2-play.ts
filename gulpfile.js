@@ -9,7 +9,7 @@ var PATHS = {
     },
     lib: [
         'node_modules/angular2/node_modules/traceur/bin/traceur-runtime.js',
-        'node_modules/systemjs/dist/system-csp-production.src.js'
+        'node_modules/systemjs/dist/system-csp-production.js'
     ]
 };
 
