@@ -20,7 +20,7 @@ gulp.task('clean', function (done) {
 gulp.task('ng2', function () {
     var download = require('gulp-download');
     var ng2Version = require('./package.json').dependencies.angular2;
-    return download('https://code.angularjs.org/' + ng2Version + '/angular2.js').pipe(gulp.dest('dist/lib'));
+    return download('https://code.angularjs.org/' + ng2Version + '/angular2.min.js').pipe(gulp.dest('dist/lib'));
 });
 
 gulp.task('js', function () {
