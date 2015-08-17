@@ -29,6 +29,7 @@ gulp.task('js', function () {
             noImplicitAny: true,
             module: 'system',
             target: 'ES5',
+            emitDecoratorMetadata: true,
             experimentalDecorators: true
         }));
 
