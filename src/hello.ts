@@ -1,11 +1,11 @@
-import {Component, View, bootstrap, coreDirectives} from 'angular2/angular2';
+import {Component, View, bootstrap, CORE_DIRECTIVES} from 'angular2/angular2';
 
 @Component({
     selector: 'hello'
 })
 @View({
     template: `<span *ng-if="name">Hello, {{name}}!</span>`,
-    directives: [coreDirectives]
+    directives: [CORE_DIRECTIVES]
 })
 export class Hello {
     name: string = 'World';
