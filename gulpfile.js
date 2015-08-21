@@ -9,7 +9,8 @@ var PATHS = {
         'node_modules/angular2/node_modules/traceur/bin/traceur-runtime.js',
         'node_modules/angular2/bundles/angular2.min.js',
         'node_modules/systemjs/dist/system-csp-production.js'
-    ]
+    ],
+    typings: 'node_modules/angular2/bundles/typings/angular2/angular2.d.ts'
 };
 
 gulp.task('clean', function (done) {
@@ -19,7 +20,7 @@ gulp.task('clean', function (done) {
 
 gulp.task('js', function () {
     var typescript = require('gulp-typescript');
-    var tsResult = gulp.src(PATHS.src.js)
+    var tsResult = gulp.src([PATHS.src.js, PATHS.typings])
         .pipe(typescript({
             noImplicitAny: true,
             module: 'system',
