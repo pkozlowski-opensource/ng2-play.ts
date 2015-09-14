@@ -16,7 +16,8 @@
     "gulp": "^3.9.0",
     "gulp-typescript": "^2.8.0",
     "open": "0.0.5",
-    "serve-static": "^1.10.0"
+    "serve-static": "^1.10.0",
+    "traceur-runtime": "0.0.59"
   },
   "dependencies": {
     "angular2": "2.0.0-alpha.37",
