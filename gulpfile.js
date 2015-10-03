@@ -36,7 +36,7 @@ gulp.task('play', ['ts2js'], function () {
 
     app = connect().use(serveStatic(__dirname));
     http.createServer(app).listen(port, function () {
-        open('http://localhost:' + port  + '/dist');
+        open('http://localhost:' + port);
     });
 });
 
