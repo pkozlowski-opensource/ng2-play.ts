@@ -5,10 +5,6 @@ var PATHS = {
         js: 'src/**/*.ts',
         html: 'src/**/*.html'
     },
-    lib: [
-        'node_modules/angular2/bundles/angular2.min.js',
-        'node_modules/systemjs/dist/system-csp-production.js'
-    ],
     typings: 'node_modules/angular2/bundles/typings/angular2/angular2.d.ts'
 };
 
@@ -35,11 +31,7 @@ gulp.task('html', function () {
     return gulp.src(PATHS.src.html).pipe(gulp.dest('dist'));
 });
 
-gulp.task('libs', function () {
-    return gulp.src(PATHS.lib).pipe(gulp.dest('dist/lib'));
-});
-
-gulp.task('play', ['libs', 'html', 'js'], function () {
+gulp.task('play', ['html', 'js'], function () {
     var http = require('http');
     var connect = require('connect');
     var serveStatic = require('serve-static');
@@ -50,9 +42,9 @@ gulp.task('play', ['libs', 'html', 'js'], function () {
     gulp.watch(PATHS.src.html, ['html']);
     gulp.watch(PATHS.src.js, ['js']);
 
-    app = connect().use(serveStatic(__dirname + '/dist'));  // serve everything that is static
+    app = connect().use(serveStatic(__dirname));
     http.createServer(app).listen(port, function () {
-        open('http://localhost:' + port);
+        open('http://localhost:' + port  + '/dist');
     });
 });
 
