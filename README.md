@@ -1,6 +1,6 @@
 # ng2-play.ts
 
-A minimal Angular2 playground using TypeScript and SystemJS
+A minimal [Angular2](https://angular.io/) playground using [TypeScript](http://www.typescriptlang.org/) and [SystemJS loader](https://github.com/systemjs/systemjs)
 
 ## Install
 
